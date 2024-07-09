@@ -115,7 +115,7 @@
                       <td>경기명 : </td>
                       <td>${gameListVO.gTitle}</td>
                       <td>
-                        경기 생성일 :
+                        생성일 :
                       </td>
                       <td>
                         ${gameListVO.gCreatedDate}
@@ -126,7 +126,7 @@
                       <td>${gameListVO.sName} ${gameListVO.sNum} 경기장</td>
                     </tr>
                     <tr>
-                      <td>경기장 주소 : </td>
+                      <td>주소 : </td>
                       <td>${gameListVO.sAddr}</td>
                     </tr>
                     <tr>
