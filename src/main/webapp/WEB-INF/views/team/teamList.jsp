@@ -14,8 +14,9 @@
     <!--팀 가입하기 실행결과 에러 확인-->
     function checkInsertTeamMemberResult() {
       var errorMsg = '${errorMsg}';
-      if (errorMsg != NULL && errorMsg != "") {
+      if (errorMsg != null && errorMsg != "") {
         alert(errorMsg);
+      }
     }
   </script>
 </head>
@@ -117,7 +118,7 @@
                 <td>${team.tMember} / ${team.tMaxMember}</td>
                 <td>${team.tInfo}</td>
                 <td class="teamjoinform">
-                  <form method="post" action="${contextPath}/insertTeamMember">
+                  <form method="post" action="/insertTeamMember">
                     <input type="hidden" name="tID" value="${team.tID}">
                     <button type="submit">가입</button>
                   </form>

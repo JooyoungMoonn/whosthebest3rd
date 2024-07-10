@@ -4,6 +4,7 @@ import dc.human.whosthebest.aboutteam.dao.AboutTeamDAO;
 import dc.human.whosthebest.team.dao.TeamDAO;
 import dc.human.whosthebest.vo.*;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.dao.DataAccessException;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Propagation;
 import org.springframework.transaction.annotation.Transactional;
@@ -43,7 +44,19 @@ public class TeamServiceImpl implements TeamService {
     //팀 가입하기 메소드
     @Override
     public int insertTeamMember(TeamMemberVO teamMemberVO) throws Exception {
-        return teamDAO.insertTeamMember(teamMemberVO);
+        try {
+            return teamDAO.insertTeamMember(teamMemberVO);
+        } catch (DataAccessException e) {
+            // DataAccessException 처리
+            System.out.println("DataAccessException 발생: " + e.getMessage());
+            // 필요한 경우 로그를 남기거나 다른 예외로 변환
+            return 0; // 또는 적절한 값을 반환하거나 예외를 다시 던질 수 있습니다.
+        } catch (Exception e) {
+            // 기타 예외 처리
+            System.out.println("Exception 발생: " + e.getMessage());
+            // 필요한 경우 로그를 남기거나 다른 예외로 변환
+            return 0; // 또는 적절한 값을 반환하거나 예외를 다시 던질 수 있습니다.
+        }
     };
 
     //팀 생성과 동시에 팀장 정보 team_member 테이블에 저장을 위한 메소드

@@ -13,9 +13,10 @@
   <script type="text/javascript">
   <!--팀만들기 실행결과 에러 확인-->
     function checkInsertTeamResult() {
-      var errorMsg = '${errorMsg}';
-      if (errorMsg != NULL && errorMsg != "") {
+      var errorMsg = "${errorMsg}";
+      if (errorMsg != null && errorMsg != "") {
         alert(errorMsg);
+      }
     }
   </script>
 </head>

@@ -75,14 +75,15 @@ public class TeamControllerImpl implements TeamController{
     //팀 가입하기(유저)
         //이미 가입한 팀 검사
         //3개이상 가입 금지
+        //팀 가입시 알림
     @Override
     @RequestMapping(value="/insertTeamMember" ,method = RequestMethod.POST)
     public ModelAndView insertTeamMember(@SessionAttribute(name = "loginId", required = false) String loginId,
                                          @RequestParam("tID") int tID) throws Exception{
         ModelAndView mav = new ModelAndView();
-
+        String viewName = "";
         try {
-            String viewName = "";
+
             String userID = loginId;
             TeamMemberVO teamMember = new TeamMemberVO();
             teamMember.setCreatedID(userID);
@@ -95,6 +96,7 @@ public class TeamControllerImpl implements TeamController{
                 mav.addObject("errorMsg", "팀 가입 실패");
                 viewName = "team/teamList";
             } else {
+                mav.addObject("errorMsg", tID+"팀 가입 성공");
                 viewName = "redirect:/teamList";
                 //redirect 수정 핋요
             }
