@@ -14,31 +14,41 @@
   <header>
   <main>
 
-      <div class="admin">
-        <a href="/admin/main.do">
-         <img src="/image/home.png" alt="홈으로">
-        </a>
+       <div class="admin">
+         <a href="/admin/main.do">
+          <img src="../image/home.png" alt="홈으로">
+         </a>
 
-         <div> 관리자 페이지 </div>
-      </div>
-
-      <h2> 게임 상세보기</h2>
-
-    <div>
-      <div class="side">
-        <img src="/image/user.png" alt="사용자">
-          <div> admin</div>
+          <div> 관리자 페이지 </div>
+       </div>
+ <!-- 사이드 바 -->
+     <div>
+       <div class="side">
+         <img src="../image/user.png" alt="사용자">
+           <div> admin</div>
 
              <ul style="list-style-type: none;">
-                  <li> <a href="/admin/main.do"> 관리자 메인 </a> </li>
-                  <li> <a href="/admin/userList.do">회원 관리 </a> </li>
-                  <li><a href="/admin/teamList.do">팀 관리 </a> </li>
-                  <li><a href="/admin/gameList.do">경기 관리 </a></li>
+                <li> <a href="/admin/main.do"> 관리자 메인 </a> </li>
+                <li> <a href="/admin/userList.do">회원 관리 </a> </li>
+                <li><a href="/admin/teamList.do">팀 관리 </a> </li>
+                <li><a href="/admin/gameList.do">경기 관리 </a></li>
+                <li><a href="/mainBoard"> 게시판 </a></li>
              </ul>
-        <a href="/login">
-        <img class="logoutimg" src="/image/logout.png" alt="로그아웃">
-      </a>
-    </div>
+
+         <img class="logoutimg" src="/image/logout.png" alt="로그아웃" onclick="logoutFunction()" >
+         <script>
+         function logoutFunction() {
+             // 로그아웃을 수행할 URL 설정
+             var logoutUrl = "/logout"; // 예시 URL, 실제 프로젝트에 맞게 수정
+
+             // 로그아웃을 요청하고 페이지 이동
+             window.location.href = logoutUrl;
+         }
+         </script>
+
+
+     </div>
+
 
     <div class="gameDetail">
       <table class="gameInfo">

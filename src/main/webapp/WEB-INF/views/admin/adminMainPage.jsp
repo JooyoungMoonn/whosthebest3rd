@@ -10,8 +10,6 @@
   <link rel="stylesheet" href="../css/adminPage.css">
   <title>관리자페이지-관리자 메인</title>
 
-  <!-로그아웃 alert 함수-->
-
 </head>
 <body>
   <header>
