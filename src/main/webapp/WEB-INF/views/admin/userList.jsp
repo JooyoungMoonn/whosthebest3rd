@@ -15,7 +15,7 @@
 
         <div class="admin">
           <a href="/admin/main.do">
-           <img src="../image/home.png" alt="홈으로">
+           <img src="/image/home.png" alt="홈으로">
           </a>
 
            <div> 관리자 페이지 </div>
@@ -23,7 +23,7 @@
   <!-- 사이드 바 -->
       <div>
         <div class="side">
-          <img src="../image/user.png" alt="사용자">
+          <img src="/image/user.png" alt="사용자">
             <div> admin</div>
 
               <ul style="list-style-type: none;">
