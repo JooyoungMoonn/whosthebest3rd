@@ -117,10 +117,17 @@
                 <td>${team.tMember} / ${team.tMaxMember}</td>
                 <td>${team.tInfo}</td>
                 <td class="teamjoinform">
-                  <form method="post" action="/insertTeamMember">
-                    <input type="hidden" name="tID" value="${team.tID}">
-                    <button type="submit">가입</button>
-                  </form>
+                  <c:choose>
+                    <c:when test="${team.isJoined eq 'false'}">
+                      <button type="button" disabled>가입 중</button>
+                    </c:when>
+                    <c:otherwise>
+                      <form method="post" action="/insertTeamMember">
+                        <input type="hidden" name="tID" value="${team.tID}">
+                        <button type="submit">가입</button>
+                      </form>
+                    </c:otherwise>
+                  </c:choose>
                 </td>
               </tr>
             </c:forEach>

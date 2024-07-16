@@ -29,9 +29,9 @@ public class TeamServiceImpl implements TeamService {
     private static final SimpleDateFormat displayFormat = new SimpleDateFormat("yyyy/MM/dd HH:mm");
 
     @Override
-    public List listTeams() throws Exception {
+    public List listTeams(String userID) throws Exception {
         List teamsList = null;
-        teamsList = teamDAO.selectTeamList();
+        teamsList = teamDAO.selectTeamList(userID);
         return teamsList;
     }
 

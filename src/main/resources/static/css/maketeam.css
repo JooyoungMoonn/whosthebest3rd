@@ -328,6 +328,16 @@ main{
             background-color: rgb(184, 206, 146);
             border : none;
           }
+          >button {
+            color : white;
+            font-size: 16px;
+            font-family: 'GmarketSansMedium';
+            height : 35px;
+            line-height: 37px;
+            width : 80px;
+            background-color: gray;
+            border : none;
+          }
         }
       }
       >tbody td{

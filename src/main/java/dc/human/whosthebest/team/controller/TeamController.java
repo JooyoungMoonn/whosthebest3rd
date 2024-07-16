@@ -27,7 +27,7 @@ public interface TeamController {
                                          @RequestParam("tID") int tID,
                                          RedirectAttributes redirectAttributes) throws Exception;
 
-    public ModelAndView listTeams() throws Exception;
+    public ModelAndView listTeams(@SessionAttribute(name = "loginId", required = false) String loginId) throws Exception;
 
     public ModelAndView myTeamPage(@SessionAttribute(name = "loginId", required = false) String loginId);
 

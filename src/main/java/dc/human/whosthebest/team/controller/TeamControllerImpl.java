@@ -115,8 +115,9 @@ public class TeamControllerImpl implements TeamController{
         //검색 기능 지역 필터링 메소드 추가 필요
     @Override
     @GetMapping("/teamList")
-    public ModelAndView listTeams() throws Exception{
-        List teamsList = teamService.listTeams();
+    public ModelAndView listTeams(@SessionAttribute(name = "loginId", required = false) String loginId) throws Exception{
+        String userID = loginId;
+        List teamsList = teamService.listTeams(userID);
         ModelAndView mav = new ModelAndView("/team/teamList");
         mav.addObject("teamsList", teamsList);
         return mav;

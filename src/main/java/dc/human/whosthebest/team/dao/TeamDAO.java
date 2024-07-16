@@ -12,7 +12,7 @@ import java.util.List;
 @Mapper
 @Repository("teamDAO")
 public interface TeamDAO {
-    public List selectTeamList() throws DataAccessException;
+    public List selectTeamList(@Param("userID") String userID) throws DataAccessException;
     public int insertTeamInfo(TeamInfoVO teamInfoVO) throws DataAccessException;
     public int insertTeamMember(TeamMemberVO teamMemberVO) throws DataAccessException;
     public List<TeamInfoVO> selectTeamsByUserId(String userID) throws DataAccessException;

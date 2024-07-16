@@ -15,6 +15,7 @@ public class TeamInfoVO {
 	private int tMaxAge;
 	private int tMaxMember;
 	private int tMember;
+	private String isJoined;
 	private String tInfo;
 	private String createdID;
 	private String createdDate;
@@ -94,6 +95,15 @@ public class TeamInfoVO {
 	public void settInfo(String tInfo) {
 		this.tInfo = tInfo;
 	}
+
+	public String getIsJoined() {
+		return isJoined;
+	}
+
+	public void setIsJoined(String isJoined) {
+		this.isJoined = isJoined;
+	}
+
 	public String getCreatedID() {
 		return createdID;
 	}

@@ -18,6 +18,7 @@
         <result property="tMaxMember" column="T_MAXMEMBER" />
         <result property="tMember" column="T_MEMBER" />
         <result property="tInfo" column="T_INFO" />
+        <result property="isJoined" column="IS_JOINED" />
         <result property="createdID" column="CREATED_ID" />
         <result property="createdDate" column="CREATED_DATE" />
         <result property="updatedID" column="UPDATED_ID" />
@@ -179,13 +180,23 @@
             T.T_MAXAGE,
             T.T_MEMBER,
             T.T_MAXMEMBER,
-            T.T_INFO
+            T.T_INFO,
+            CASE
+                WHEN TM.T_ID IS NOT NULL THEN 'true' ELSE 'false'
+            END AS IS_JOINED
         FROM
             TEAM T
         LEFT JOIN
             RANK R ON T.RANKSCORE BETWEEN R.MINSCORE AND R.MAXSCORE
-
-    ]]>
+        LEFT JOIN
+            TEAM_MEMBER TM ON T.T_ID = TM.T_ID
+        ]]>
+        <if test="userID != null and userID != ''">
+        <![CDATA[
+        AND
+            TM.U_ID = #{userID}
+        ]]>
+        </if>
     </select>
 
     <!-- 랭킹 select_허진욱-->
