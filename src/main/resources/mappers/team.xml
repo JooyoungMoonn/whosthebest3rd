@@ -196,7 +196,6 @@
         ]]>
         </if>
         ORDER BY T.CREATED_DATE DESC
-
     </select>
 
     <!-- 랭킹 select_허진욱-->
