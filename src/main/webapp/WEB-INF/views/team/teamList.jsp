@@ -118,7 +118,7 @@
                 <td>${team.tInfo}</td>
                 <td class="teamjoinform">
                   <c:choose>
-                    <c:when test="${team.isJoined eq 'false'}">
+                    <c:when test="${team.isJoined eq 'true'}">
                       <button type="button" disabled>가입 중</button>
                     </c:when>
                     <c:otherwise>
