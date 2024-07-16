@@ -57,12 +57,9 @@
         </div>
         <div>
           <form name="maketeam" method="post" action="/insertTeamInfo" enctype="utf-8">
-            <div>
-              <input type="file" name="tLogo">
-            </div>
+            <div></div>
             <div>
               <input type="text" name="tName" size="12" maxlength="12" placeholder="팀 이름을 입력해주세요" required>
-              <input type="button" value="팀이름 중복">
             </div>
             <div>
               <select name="tRegion">

@@ -144,41 +144,16 @@ main{
   >div:nth-child(2)>form{
     >div:first-child { /*팀로고*/
       margin-bottom: 10px;
-      input{
-        box-sizing: border-box;
-        padding-left: 10px;
-        padding-top: 5px;
-        width: 370px;
-        height: 35px;
-        margin-bottom: 5px;
-        color: rgb(126, 148, 87);
-        border: 1px solid rgb(184, 206, 146);
-      }
-      >input:focus {outline: none;}
-      /* >input::placeholder{color: rgb(126, 148, 87);} */
     }
     >div:nth-child(2){ /*팀이름*/
       margin-bottom: 10px;
       input:first-child{
         box-sizing: border-box;
         padding-left: 10px;
-        width: 250px;
+        width: 370px;
         height: 35px;
         color: rgb(126, 148, 87);
         border: 1px solid rgb(184, 206, 146);
-      }
-      >input:nth-child(2){  /*팀이름 중복버튼*/
-        box-sizing: border-box;
-        width: 120px;
-        height: 35px;
-        position: relative;
-        top: 1px;
-        margin-left: -7px;
-        border: 1px solid rgb(184, 206, 146);
-        background-color:rgb(184, 206, 146);
-        color: white;
-        font-size: 13px;
-        font-weight: bold;
       }
       >input:focus {outline: none;}
       >input::placeholder{color: rgb(126, 148, 87);}
