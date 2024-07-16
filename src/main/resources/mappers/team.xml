@@ -127,7 +127,6 @@
         <![CDATA[
             INSERT INTO TEAM (
             T_NAME,
-            T_LOGO,
             T_REGION,
             T_PHONE,
             T_MINAGE,
@@ -136,7 +135,6 @@
             CREATED_ID
             ) VALUES (
             #{tName},
-            #{tLogo},
             #{tRegion},
             #{tPhone},
             #{tMinAge},
