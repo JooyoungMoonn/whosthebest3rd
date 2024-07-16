@@ -60,6 +60,7 @@
             <div></div>
             <div>
               <input type="text" name="tName" size="12" maxlength="12" placeholder="팀 이름을 입력해주세요" required>
+
             </div>
             <div>
               <select name="tRegion">
